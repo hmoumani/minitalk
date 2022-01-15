@@ -21,9 +21,9 @@ void    send_char(char c, pid_t pid)
             protected_kill(pid, SIGUSR2);
         else
             protected_kill(pid, SIGUSR1);
-        // while (usleep(1000) != -1)
+        // while (usleep(10000) != -1)
         //     ;
-        usleep(10000);
+        usleep(5000);
         i--;
     }
 }
@@ -52,7 +52,7 @@ void    send_client_pid(pid_t pid, pid_t server_pid)
         else
             protected_kill(server_pid, SIGUSR1);
         i--;
-        usleep(10000);
+        usleep(5000);
     }
 }
 

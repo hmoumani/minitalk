@@ -23,7 +23,7 @@ void    handler(int sig)
         }
         if (write(1, &c, 1) == -1)
         {
-            protected_kill(pid, ACK);
+            protected_kill(pid, NACK);
             exit(1);
         }
         c = 0;
